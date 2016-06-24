@@ -1,0 +1,72 @@
+<div class="container">
+
+  <div class="lead well">
+    <div class="media">
+      <div class="media-left">
+        <a href="#">
+          <img class="media-object" src="<%= @question.gravatar %>" alt="...">
+        </a>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading"><%= @question.email %> asked</h4>
+        <div><small><%= time_ago_in_words @question.created_at %> ago</small></div>
+        <%= @question.body %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+
+      <div>
+        <a href="#" class="btn btn-success" data-toggle="modal" data-target="#new-answer-modal">New answer</a>
+      </div>
+
+      <%= render "home/new_answer_form" %>
+
+      <div class="media">
+        <div class="media-left">
+          <a href="#">
+            <img class="media-object" src="http://placehold.it/75" alt="...">
+          </a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">user@mail.com answered</h4>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. In veniam minus repellat, possimus eaque esse animi, fugiat repudiandae nam nulla modi, earum adipisci nostrum porro. Placeat quia suscipit dicta perferendis ducimus quis commodi numquam ullam perspiciatis delectus sed voluptatibus temporibus, sapiente, ratione minus repudiandae architecto minima laborum cum natus est.
+        </div>
+      </div>
+      <div class="media">
+        <div class="media-left">
+          <a href="#">
+            <img class="media-object" src="http://placehold.it/75" alt="...">
+          </a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">user@mail.com answered</h4>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. In veniam minus repellat, possimus eaque esse animi, fugiat repudiandae nam nulla modi, earum adipisci nostrum porro. Placeat quia suscipit dicta perferendis ducimus quis commodi numquam ullam perspiciatis delectus sed voluptatibus temporibus, sapiente, ratione minus repudiandae architecto minima laborum cum natus est.
+        </div>
+      </div>
+      <div class="media">
+        <div class="media-left">
+          <a href="#">
+            <img class="media-object" src="http://placehold.it/75" alt="...">
+          </a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">user@mail.com answered</h4>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. In veniam minus repellat, possimus eaque esse animi, fugiat repudiandae nam nulla modi, earum adipisci nostrum porro. Placeat quia suscipit dicta perferendis ducimus quis commodi numquam ullam perspiciatis delectus sed voluptatibus temporibus, sapiente, ratione minus repudiandae architecto minima laborum cum natus est.
+        </div>
+      </div>
+      <div class="media">
+        <div class="media-left">
+          <a href="#">
+            <img class="media-object" src="http://placehold.it/75" alt="...">
+          </a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">user@mail.com answered</h4>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. In veniam minus repellat, possimus eaque esse animi, fugiat repudiandae nam nulla modi, earum adipisci nostrum porro. Placeat quia suscipit dicta perferendis ducimus quis commodi numquam ullam perspiciatis delectus sed voluptatibus temporibus, sapiente, ratione minus repudiandae architecto minima laborum cum natus est.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

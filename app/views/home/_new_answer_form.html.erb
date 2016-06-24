@@ -1,20 +1,20 @@
-<div class="modal fade"  id="new-question-modal" tabindex="-1" role="dialog">
+<div class="modal fade"  id="new-answer-modal" tabindex="-1" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">New question</h4>
+        <h4 class="modal-title">New answer</h4>
       </div>
       <form action="/questions" method="post">
-      <%= form_for :question, url: "/quesions" do %>
+      <%= form_for :answer, url: "/answers" do %>
         <div class="modal-body">
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
-            <input type="email" name="question[email]" class="form-control" id="exampleInputEmail1" placeholder="Email" required="true">
+            <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Email" required="true">
           </div>
           <div class="form-group">
-            <label for="inputQuestion">Question</label>
-            <textarea class="form-control" name="question[body]" id="inputQuestion" placeholder="What do you wanna know?" required></textarea>
+            <label for="inputQuestion">Answer</label>
+            <textarea class="form-control" name="answer_body" id="inputQuestion" placeholder="Do you know the answer?" required></textarea>
           </div>
         </div>
         <div class="modal-footer">

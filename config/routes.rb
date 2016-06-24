@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
+
+
+
+  resources :questions
   
+  get "/about", to: "home#about"
+  post "/answers", to: "home#temp"
 
 	root to: 'home#index'
 

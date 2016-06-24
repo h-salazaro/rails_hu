@@ -1,12 +1,17 @@
-
-<div class="media">
-  <div class="media-left">
-    <a href="#">
-      <img class="media-object" src="http://placehold.it/75" alt="...">
-    </a>
+<% @questions.each do |question| %>
+  <div class="media">
+    <div class="media-left">
+      <a href="#">
+        <img class="media-object" src="<%= question.gravatar %>" alt="...">
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading"><%= question.email %></h4>
+      <div><%= time_ago_in_words question.created_at %> ago</div>
+      <%= question.body %>
+      <div>
+        <%= link_to "See answers", question, class:"btn btn-default btn-xs" %>
+      </div>
+    </div>
   </div>
-  <div class="media-body">
-    <h4 class="media-heading">Media heading</h4>
-    ...
-  </div>
-</div>
+<% end %>
