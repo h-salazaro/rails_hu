@@ -23,50 +23,23 @@
 
       <%= render "home/new_answer_form" %>
 
+      <% @answers.each do |answer| %>
       <div class="media">
         <div class="media-left">
           <a href="#">
-            <img class="media-object" src="http://placehold.it/75" alt="...">
+            <img class="media-object" src="<%= answer.gravatar %>" alt="...">
           </a>
         </div>
         <div class="media-body">
-          <h4 class="media-heading">user@mail.com answered</h4>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. In veniam minus repellat, possimus eaque esse animi, fugiat repudiandae nam nulla modi, earum adipisci nostrum porro. Placeat quia suscipit dicta perferendis ducimus quis commodi numquam ullam perspiciatis delectus sed voluptatibus temporibus, sapiente, ratione minus repudiandae architecto minima laborum cum natus est.
+          <h4 class="media-heading"><%= answer.email %> answered</h4>
+          <div><small><%= time_ago_in_words answer.created_at %> ago</small></div>
+          <%= answer.body %>
         </div>
       </div>
-      <div class="media">
-        <div class="media-left">
-          <a href="#">
-            <img class="media-object" src="http://placehold.it/75" alt="...">
-          </a>
-        </div>
-        <div class="media-body">
-          <h4 class="media-heading">user@mail.com answered</h4>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. In veniam minus repellat, possimus eaque esse animi, fugiat repudiandae nam nulla modi, earum adipisci nostrum porro. Placeat quia suscipit dicta perferendis ducimus quis commodi numquam ullam perspiciatis delectus sed voluptatibus temporibus, sapiente, ratione minus repudiandae architecto minima laborum cum natus est.
-        </div>
-      </div>
-      <div class="media">
-        <div class="media-left">
-          <a href="#">
-            <img class="media-object" src="http://placehold.it/75" alt="...">
-          </a>
-        </div>
-        <div class="media-body">
-          <h4 class="media-heading">user@mail.com answered</h4>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. In veniam minus repellat, possimus eaque esse animi, fugiat repudiandae nam nulla modi, earum adipisci nostrum porro. Placeat quia suscipit dicta perferendis ducimus quis commodi numquam ullam perspiciatis delectus sed voluptatibus temporibus, sapiente, ratione minus repudiandae architecto minima laborum cum natus est.
-        </div>
-      </div>
-      <div class="media">
-        <div class="media-left">
-          <a href="#">
-            <img class="media-object" src="http://placehold.it/75" alt="...">
-          </a>
-        </div>
-        <div class="media-body">
-          <h4 class="media-heading">user@mail.com answered</h4>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. In veniam minus repellat, possimus eaque esse animi, fugiat repudiandae nam nulla modi, earum adipisci nostrum porro. Placeat quia suscipit dicta perferendis ducimus quis commodi numquam ullam perspiciatis delectus sed voluptatibus temporibus, sapiente, ratione minus repudiandae architecto minima laborum cum natus est.
-        </div>
-      </div>
+      <% end %>
+      <% if @answers.empty? %>
+        <div class="alert alert-info">You have no answers!</div>
+      <% end %>
     </div>
   </div>
 </div>
