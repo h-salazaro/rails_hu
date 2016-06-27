@@ -9,6 +9,8 @@ class MainMailer < ApplicationMailer
     @greeting = "Hi"
     @answer = answer
 
+    sleep 10
+
     mail to: answer.question.email, from: answer.email
   end
 end
