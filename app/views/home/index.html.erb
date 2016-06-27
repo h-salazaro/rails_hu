@@ -8,10 +8,10 @@
     </div>
     <div class="media-body">
       <h4 class="media-heading"><%= question.email %></h4>
-      <div class="time"><%= time_ago_in_words question.created_at %> ago</div>
-      <%= question.body %>
+      <div class="time hidden-xs"><%= time_ago_in_words question.created_at %> ago</div>
+      <%= truncate question.body, length: 300%>
       <div>
-        <%= link_to "See answers", question, class:"btn btn-default btn-xs" %>
+        <%= link_to "See answers", question, class:"btn hidden-xs btn-default btn-xs" %>
       </div>
     </div>
   </div>

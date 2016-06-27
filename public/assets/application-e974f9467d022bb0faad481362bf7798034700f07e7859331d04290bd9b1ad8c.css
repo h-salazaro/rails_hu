@@ -1,0 +1,48 @@
+/* line 5, /Users/h.salazar.olivares/Development/HU/app/assets/stylesheets/home.scss */
+.navbar {
+  margin-bottom: 0;
+}
+
+/* line 10, /Users/h.salazar.olivares/Development/HU/app/assets/stylesheets/home.scss */
+.boxes .media {
+  border: thin solid #ddd;
+  padding: 1em;
+  border-radius: 6px;
+  background-color: #eee;
+  position: relative;
+}
+/* line 16, /Users/h.salazar.olivares/Development/HU/app/assets/stylesheets/home.scss */
+.boxes .media .time {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #666;
+}
+/* line 22, /Users/h.salazar.olivares/Development/HU/app/assets/stylesheets/home.scss */
+.boxes .media a.btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #666;
+}
+/* line 28, /Users/h.salazar.olivares/Development/HU/app/assets/stylesheets/home.scss */
+.boxes .media:hover {
+  cursor: pointer;
+  background-color: #e1e1e1;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
